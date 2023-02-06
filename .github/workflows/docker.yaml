@@ -13,7 +13,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        version: []
+        version:
+        - 20230124
+        arch:
+        - x86_64
 
     steps:
     - name: Checkout
