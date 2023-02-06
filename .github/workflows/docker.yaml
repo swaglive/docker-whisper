@@ -59,7 +59,7 @@ jobs:
         flavor: |-
           latest=${{ !!matrix.latest }}
         tags: |-
-          type=semver,pattern={{major}}.{{minor}},value=${{ matrix.version }}
+          type=schedule,pattern={{date 'YYYYMMDD'}}
 
     - name: Build
       uses: docker/build-push-action@v4
